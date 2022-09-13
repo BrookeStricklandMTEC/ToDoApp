@@ -1,0 +1,42 @@
+
+
+.header { 
+
+display: flex; 
+justify-content: space-between;
+flex-wrap: wrap;
+align-content: stretch;
+margin: 15px 10px 10px 15px; 
+
+}
+
+.container { 
+
+margin-left: 0px;
+padding: 0px;
+
+
+}
+
+.row{
+
+display: flex;
+flex-wrap: wrap;
+align-content: stretch;
+
+}
+
+.textInput{
+
+margin-left: 0px;
+
+}
+
+
+
+/* .darkMode{
+
+background-color: black;
+color:white; 
+
+} */
