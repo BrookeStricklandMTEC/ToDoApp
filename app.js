@@ -50,15 +50,14 @@ $(".noteInput").keyup(function(g) {
         $("ul").append(
             
             
-        `<li>
-        <input type="checkbox" class="checkBox">
-        ` 
+        `<li> ` 
 
         + noteInput + 
 
-        `<i style="font-size:17px" class="fa" id="edit"> &#xe065; </i>
-        <i style="font-size:17px" class="fa" id="delete"> &#xf00d; </i> 
-        
+        `
+        <i style="font-size:17px" class="fa" id="edit"> &#xf044;</i>
+        <span> </span> 
+        <i style="font-size:17px" class="fa" id="trash">&#xf014;</i>
         </li> 
         `  
         
