@@ -1,10 +1,3 @@
-const object = {
-
-    textInput: $(".textInput"),
-    checkBox: $(".checkBox"),
-    headingNote: $("#headingNote"),
-
-}
 
 // To create
 // 
@@ -21,75 +14,63 @@ const object = {
 
 // How to make new entered notes create new "page" on left column 
 
-$(".textInput").keyup(function(e) {
+
+$(".headingInput").keyup(function(e) {
+
     if (e.key == "Enter") {
 
-        $(".firstNoteInput").show(100);
+        $(".noteInput").show(100);
         $(".checkBox").show(100);
-        $("#leftHeadingNote").append( `
-        
-        <div class="col-sm" id="leftColumn">
-
-            <div class="leftPlaceHolder" >
-             ${$('.textInput').val()}
-            </div>
-
-        </div> `
-    
-        );
-
-      } 
-
-    else {
-        
-        `<div class="col-sm" id="leftColumn">
-    
-                <div class="leftPlaceHolder" >
-                 <div> </div>
-                 ${$('.textInput').val()}
-                </div>
-    
-            </div> `
-
-        }
-
-    });
-
-    // Get help
-
-    // const checkBox = (e) => {
-    //     if ($(".checkBox").is(":checked")) {
-    //         $("firstNoteInput").css("text-decoration", "strike-through");
-    //     } else {
-    //         $("firstNoteInput").css("text-decoration", "none");
-    //     }
-    //   };Z
-
-    //   $(document).on("click", checkBox);
-
-
-
-
-$(".textInput").keyup(function(newList) {
-    if (newList.key == "Enter") {
-
-        $("#rightHeadingNote").show(100);
+        $("#delete").show(100);
+        $("#save").show(100);
 
         $("#rightHeadingNote").append( `
         
         <div class="col-sm" id="rightColumn">
 
-            <div class="rightPlaceHolder">     
-                ${$('.textInput').val()} 
+            <div class="rightPlaceHolder" >
+             ${$('.headingInput').val()}
             </div>
 
-        </div>`
-    
-        );
+        </div> `
+        
+    )}
 
-      }
-    }
-);
+
+});
+
+
+
+// when new text entry is changed, it will add the value underneath it 
+
+// $(document).ready(function(){
+
+//     $('#newNote').change(function(){
+
+//         var newEntry = $(this).val();
+//         $('ul').append('<li>' + newNote + '</li>');
+//         $(this).val('');
+
+//     });
+
+// })
+
+
+    
+
+
+    // Get help checkbox
+
+    // const checkBox = (e) => {
+    //     if ($(".checkBox").is(":checked")) {
+    //         $(".noteInput").css("text-decoration", "strike-through");
+    //     } else {
+    //         $(".noteInput").css("text-decoration", "none");
+    //     }
+    //   };Z
+
+    //   $(document).on("click", checkBox);
+
 
 // newList();
 
@@ -121,6 +102,20 @@ $(".textInput").keyup(function(newList) {
 
 
 // ${$('.textInput').val()}
+
+
+
+// Delete Button
+
+// $('.firstNoteInput').on('click',' #delete', function () {
+
+//     let delete1 = $(this).parents()[3]
+//     console.log(delete1); 
+
+//     // $(delete1).remove(); 
+
+
+// });
 
 
 

@@ -3,11 +3,21 @@
 /* Header  */
 
 
-body, html {
+body, html{ 
 
-
+    background-image: linear-gradient( #fff6b7, #f6416c);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
 }
 
+* {
+
+    text-transform: lowercase;
+    
+}
 
 
 .header { 
@@ -17,9 +27,10 @@ body, html {
     flex-wrap: wrap;
     align-content: stretch;
     margin: 15px 10px 10px 15px; 
-    margin-left: 107px;
+    margin-left: 70px;
     
 }
+
 
 .headerIcons{
 
@@ -35,26 +46,41 @@ body, html {
 
 /* Buttons */
 
+
+
+/* Styling Buttons to Align with newInput */
+
 #save { 
 
     display: none;
-    margin: 5px 6px 6px 5px;
-
+   
+    
 }
 
 #delete{
 
     display: none;
-    margin: 5px 6px 6px 5px;
+   
 
 }
 
-/* buttons class wont work */
-
 /*  */
 
+#leftColumn {
 
-.rightPlaceHolder { 
+    background-color: #d291bc; 
+    
+}
+
+#rightColumn{
+
+    height: 500px;
+    
+}
+
+
+
+.leftPlaceHolder { 
    
     display: flex;
     align-content: stretch;
@@ -63,7 +89,7 @@ body, html {
     display: block;
 }
 
-.leftPlaceHolder { 
+.rightPlaceHolder { 
 
     display: flex;
     align-content: stretch;
@@ -71,19 +97,30 @@ body, html {
     
 }
 
-.firstNoteInput, .checkBox { 
+.noteInput, .checkBox { 
     
     display: none; 
     transition: .2s;
-    position: absolute;
-    
+    margin: 5px;
+    position: relative;
+    top: 70px;
+    right: 50px; 
+
+}
+
+.noteInput { 
+
+width: 150px;
+height: 20px;
+
+
 }
 
 .checkBox{
 
     width: 15px;
     height: 15px;
-
+    top:72px;
 }
 
 .strike{
@@ -92,37 +129,35 @@ body, html {
 
 }
 
-.firstNoteInput{
+.headingInput{
 
     width: 210px;
     height: 30px; 
     border-style:solid; 
-    border-left: none;
-    border-right: none;
-}
-
-.rightHeadingNote { 
-
-    display: none; 
-    transition: .2s;
     border-style: solid;
-    border-left-color: blue;
-    position: fixed;
-    font-size: 20px;
+    border-color: white;
+    background-color: #d291bc;
+    color: white; 
+    margin:2px 5px 2px 5px; 
+}
 
+.headingInput::placeholder { 
+
+    color: #ececec; 
+     
 }
 
 
-/* Javascript */
-
-#leftHeadingNote{
+#rightHeadingNote{
 
     margin-bottom: 30px;
     font-size: 30px;
 
 }
 
-#rightHeadingNote{
+/* Border and note arent aligned */
+
+#leftHeadingNote{
     
     margin: 20px 20px 0px 20px; 
     width: 20px;
@@ -136,35 +171,17 @@ body, html {
     
 }
 
-#rightHeadingNote > {
+
+#leftHeadingNote > {
 
     font-size: 20px;
 
 }
 
 
+/*  */
 
 
-
-
-.checkBox { 
-
-margin: 15px; 
-
-}
-
-
-.col-sm{ 
-
-height: 750px;
-
-}
-
-#rightColumn{
-
-background-color: rgb(228, 222, 222);
-
-}
 
 
 
