@@ -20,7 +20,6 @@ $(".headingInput").keyup(function(e) {
     if (e.key == "Enter") {
 
         $(".noteInput").show(100);
-        $(".checkBox").show(100);
         $("#delete").show(100);
         $("#save").show(100);
 
@@ -40,23 +39,28 @@ $(".headingInput").keyup(function(e) {
 });
 
 
-
 // when new text entry is changed, it will add the value underneath it 
 
-// $(document).ready(function(){
+$(".noteInput").keyup(function(e) {
 
-//     $('#newNote').change(function(){
+    if (e.key == "Enter") {
 
-//         var newEntry = $(this).val();
-//         $('ul').append('<li>' + newNote + '</li>');
-//         $(this).val('');
+        $("#noteInput").append(
+            
+            
+        '<li>' 
+        + newNote + 
+        ` 
+        <input type="checkbox" class="checkBox">
+        <i style="font-size:17px" class="fa" id="save"> &#xf00c; </i> 
+        <i style="font-size:17px" class="fa" id="delete"> &#xf00d; </i>' 
+        </li> 
+        ` 
+        
+    )}
 
-//     });
 
-// })
-
-
-    
+});
 
 
     // Get help checkbox
