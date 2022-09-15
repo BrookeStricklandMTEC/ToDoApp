@@ -26,7 +26,8 @@
         <div class="header"> 
             <h3> Lists </h3>
             <div class="icons"> 
-                <i style="font-size:17px" class="fa">&#xf013;</i>
+                <i style="font-size:22px;" class="fa">&#xf013;</i>
+                <div class="iconSpacing"> </div>
                 <i style="font-size:24px" class="fa">&#xf007;</i>
             </div>
 
@@ -43,26 +44,33 @@
 
         <div class="row">
 
-            <div class="col-sm">
+            <div class="col-sm" id="rightColumn">
 
-                <div class="rightSide"> 
-
-                    <input type="text" placeholder="Type Here..." class="textInput"> 
-                    <div class="newRightRow" class="col-sm"> </div>
+                <div class="rightPlaceHolder"> 
+                    
+                    <input type="text" placeholder="Enter List Name" class="textInput"> 
+                    <!-- <div class="newRightRow" class="col-sm"> </div> -->
+                    <div id="rightHeadingNote"> </div>
+                    
                 </div>
 
             </div>
 
-            <div class="col-sm">
+            <div class="col-sm" id="leftColumn">
 
-                <div class="leftSide">
-                    <div id="headingNote"> </div>
-                    <input type="checkbox" class="checkBox"> <div class="newTextEntry"> </div>
-                    <div class="newRightRow" class="col-sm"> </div>
+                <div class="leftPlaceHolder" >
+                   
+                    <div id="leftHeadingNote"> </div>
+                    <input type="checkbox" class="checkBox" style="top: 20%; left: 50%;"> <input type="text" placeholder="New Note" class="firstNoteInput" style="top: 21%; left: 53%;">
+                    <div class="newTextEntry"> </div>
+                    
 
                 </div>
 
+                
+
              </div> 
+
         </div> 
     </div>
 

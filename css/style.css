@@ -1,42 +1,152 @@
 
 
+/* Header  */
+
+
+body, html {
+
+
+}
+
+
+
 .header { 
 
-display: flex; 
-justify-content: space-between;
-flex-wrap: wrap;
-align-content: stretch;
-margin: 15px 10px 10px 15px; 
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: stretch;
+    margin: 15px 10px 10px 15px; 
+    margin-left: 107px;
+    
+}
+
+.icons{
+
+    margin-right: 110px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.iconSpacing{ margin: 5px;}
+
+
+/* Note Build */
+
+
+.rightPlaceHolder { 
+   
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    margin: 20px 15px 15px 15px;
+    display: block;
+}
+
+.leftPlaceHolder { 
+
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+    
+}
+
+.firstNoteInput, .checkBox { 
+    
+    display: none; 
+    transition: .2s;
+    position: absolute;
+    
+}
+
+.checkBox{
+
+    width: 15px;
+    height: 15px;
 
 }
 
-.container { 
+.strike{
 
-margin-left: 0px;
-padding: 0px;
-
+    text-decoration: line-through;
 
 }
 
-.row{
+.firstNoteInput{
 
-display: flex;
-flex-wrap: wrap;
-align-content: stretch;
+    width: 210px;
+    height: 30px; 
+    border-style:solid; 
+    border-left: none;
+    border-right: none;
+}
+
+.rightHeadingNote { 
+
+    display: none; 
+    transition: .2s;
+    border-style: solid;
+    border-left-color: blue;
+    position: fixed;
+    font-size: 20px;
 
 }
 
-.textInput{
 
-margin-left: 0px;
+/* Javascript */
+
+#leftHeadingNote{
+
+    margin-bottom: 30px;
+    font-size: 30px;
+
+}
+
+#rightHeadingNote{
+    
+    margin: 20px 20px 0px 20px; 
+    width: 20px;
+    height: 30px;
+    transition: .2s;
+    border-left: solid;
+    border-left-color: yellow;
+    position: fixed;
+    font-size: 20px;
+    display: none;
+    
+}
+
+#rightHeadingNote > {
+
+    font-size: 20px;
 
 }
 
 
 
-/* .darkMode{
 
-background-color: black;
-color:white; 
 
-} */
+
+.checkBox { 
+
+margin: 15px; 
+
+}
+
+
+.col-sm{ 
+
+height: 750px;
+
+}
+
+#rightColumn{
+
+background-color: rgb(228, 222, 222);
+
+}
+
+
+
+
+

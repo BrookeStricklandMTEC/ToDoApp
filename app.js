@@ -6,30 +6,76 @@ const object = {
 
 }
 
+// To create
+// 
+// make strikethrough when check box is clicked
+// make new list when new heading note is created
+// make new note when typed in "newNoteSub" 
+// 
+// 
+
+
+// New Note 
 $(".textInput").keyup(function(e) {
     if (e.key == "Enter") {
-        $("#headingNote").append( `
+
+        $(".firstNoteInput").show(100);
+        $(".checkBox").show(100);
+        $("#leftHeadingNote").append( `
         
-        <div class="container">
+        <div class="col-sm" id="leftColumn">
 
-        <div class="row">
-
-            <div class="col-sm">
-
-                <div class="rightSide"> 
-                    <div class="newRightRow" class="col-sm"> </div>
-                </div>
-
+            <div class="leftPlaceHolder" >
+             ${$('.textInput').val()}
             </div>
 
-            <div class="col-sm">
+        </div> `
+    
+        );
 
-                <div class="leftSide">
-                    <div> ${$('.textInput').val()}  </div>
+      } 
+
+    else {
+        
+        `<div class="col-sm" id="leftColumn">
+    
+                <div class="leftPlaceHolder" >
+                 <div> </div>
+                 ${$('.textInput').val()}
                 </div>
+    
+            </div> `
 
-                </div> 
-            </div> 
+        }
+
+    });
+
+    const checkBox = (e) => {
+        if ($(".checkBox").is(":checked")) {
+            $("firstNoteInput").css("text-decoration", "strike-through");
+        } else {
+            $("firstNoteInput").css("text-decoration", "none");
+        }
+      };Z
+
+      $(document).on("click", checkBox);
+
+
+
+
+$(".textInput").keyup(function(newList) {
+    if (newList.key == "Enter") {
+
+        $("#rightHeadingNote").show(100);
+
+        $("#rightHeadingNote").append( `
+        
+        <div class="col-sm" id="rightColumn">
+
+            <div class="rightPlaceHolder">     
+                ${$('.textInput').val()} 
+            </div>
+
         </div>`
     
         );
@@ -38,13 +84,37 @@ $(".textInput").keyup(function(e) {
     }
 );
 
+// newList();
 
+// if (newList == true ) { 
+// $(".newNoteInput").keyup(function(e) {
+//     if (e.key == "Enter") {
+//         $(".newTextEntry").append( `
+        
+//         <div class="col-sm">
 
-// function insert_Row(){
-//     var x=document.getElementsByClassName('newRightRow').insertRow(0);
-//     var y = x.insertCell(0);
-//     var z = x.insertCell(1);
-//     y.innerHTML="New Cell1";
-//     z.innerHTML="New Cell2";
+//         <div class="leftSide">
+
+//             <div class="newTextEntry"> </div>
+
+//         </div>
+
+//      </div> `
+    
+//         );
+
+//       }
+//     }
+// );
+
 // }
+
+
+
+
+
+// ${$('.textInput').val()}
+
+
+
 
