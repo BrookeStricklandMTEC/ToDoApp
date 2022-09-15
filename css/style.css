@@ -21,17 +21,37 @@ body, html {
     
 }
 
-.icons{
+.headerIcons{
 
     margin-right: 110px;
     display: inline-flex;
     align-items: center;
 }
 
-.iconSpacing{ margin: 5px;}
+.hI-spacing{ margin: 5px;}
 
 
 /* Note Build */
+
+/* Buttons */
+
+#save { 
+
+    display: none;
+    margin: 5px 6px 6px 5px;
+
+}
+
+#delete{
+
+    display: none;
+    margin: 5px 6px 6px 5px;
+
+}
+
+/* buttons class wont work */
+
+/*  */
 
 
 .rightPlaceHolder { 

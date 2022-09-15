@@ -16,6 +16,11 @@ const object = {
 
 
 // New Note 
+
+
+
+// How to make new entered notes create new "page" on left column 
+
 $(".textInput").keyup(function(e) {
     if (e.key == "Enter") {
 
@@ -50,15 +55,17 @@ $(".textInput").keyup(function(e) {
 
     });
 
-    const checkBox = (e) => {
-        if ($(".checkBox").is(":checked")) {
-            $("firstNoteInput").css("text-decoration", "strike-through");
-        } else {
-            $("firstNoteInput").css("text-decoration", "none");
-        }
-      };Z
+    // Get help
 
-      $(document).on("click", checkBox);
+    // const checkBox = (e) => {
+    //     if ($(".checkBox").is(":checked")) {
+    //         $("firstNoteInput").css("text-decoration", "strike-through");
+    //     } else {
+    //         $("firstNoteInput").css("text-decoration", "none");
+    //     }
+    //   };Z
+
+    //   $(document).on("click", checkBox);
 
 
 
