@@ -41,21 +41,26 @@ $(".headingInput").keyup(function(e) {
 
 // when new text entry is changed, it will add the value underneath it 
 
-$(".noteInput").keyup(function(e) {
+$(".noteInput").keyup(function(g) {
 
-    if (e.key == "Enter") {
+    if (g.key == "Enter") {
 
-        $("#noteInput").append(
+        var noteInput = $(this).val(); 
+
+        $("ul").append(
             
             
-        '<li>' 
-        + newNote + 
-        ` 
+        `<li>
         <input type="checkbox" class="checkBox">
-        <i style="font-size:17px" class="fa" id="save"> &#xf00c; </i> 
-        <i style="font-size:17px" class="fa" id="delete"> &#xf00d; </i>' 
-        </li> 
         ` 
+
+        + noteInput + 
+
+        `<i style="font-size:17px" class="fa" id="edit"> &#xe065; </i>
+        <i style="font-size:17px" class="fa" id="delete"> &#xf00d; </i> 
+        
+        </li> 
+        `  
         
     )}
 
@@ -63,7 +68,7 @@ $(".noteInput").keyup(function(e) {
 });
 
 
-    // Get help checkbox
+// Get help checkbox
 
     // const checkBox = (e) => {
     //     if ($(".checkBox").is(":checked")) {
@@ -76,33 +81,6 @@ $(".noteInput").keyup(function(e) {
     //   $(document).on("click", checkBox);
 
 
-// newList();
-
-// if (newList == true ) { 
-// $(".newNoteInput").keyup(function(e) {
-//     if (e.key == "Enter") {
-//         $(".newTextEntry").append( `
-        
-//         <div class="col-sm">
-
-//         <div class="leftSide">
-
-//             <div class="newTextEntry"> </div>
-
-//         </div>
-
-//      </div> `
-    
-//         );
-
-//       }
-//     }
-// );
-
-// }
-
-
-
 
 
 // ${$('.textInput').val()}
@@ -111,15 +89,15 @@ $(".noteInput").keyup(function(e) {
 
 // Delete Button
 
-// $('.firstNoteInput').on('click',' #delete', function () {
+$('#newNote').on('click',' #delete', function () {
 
-//     let delete1 = $(this).parents()[3]
-//     console.log(delete1); 
+    let delete1 = $(this).parents()[3]
+    console.log(delete1); 
 
-//     // $(delete1).remove(); 
+    // $(delete1).remove(); 
 
 
-// });
+});
 
 
 

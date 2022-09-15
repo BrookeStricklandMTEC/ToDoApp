@@ -56,17 +56,15 @@ body, html{
 
 /* Styling Buttons to Align with newInput */
 
-#save { 
+#edit { 
 
     display: none;
-    
-    
+
 }
 
 #delete{
 
     display: none;
-   
 
 }
 .noteInput, .checkBox { 
@@ -106,6 +104,15 @@ body, html{
     text-decoration: line-through;
 
 }
+
+ul {
+
+display: flex;
+
+
+}
+
+
 
 /*  */
 
