@@ -28,7 +28,7 @@ $(".headingInput").keyup(function(e) {
         <div class="col-sm" id="rightColumn">
 
             <div class="rightPlaceHolder" >
-             ${$('.headingInput').val()}
+            <strong> ${$('.headingInput').val()} </strong>
             </div>
 
         </div> `
@@ -56,8 +56,8 @@ $(".noteInput").keyup(function(g) {
 
         `
         <i style="font-size:17px" class="fa" id="edit"> &#xf044;</i>
-        <span> </span> 
         <i style="font-size:17px" class="fa" id="trash">&#xf014;</i>
+        
         </li> 
         `  
         
@@ -67,7 +67,24 @@ $(".noteInput").keyup(function(g) {
 });
 
 
-// Get help checkbox
+
+
+// Delete Button
+
+$(document).ready(function () { 
+
+    $('#trash').on('click', function () { 
+
+        console.log("deleted"); 
+
+        // $(this).closest('li').remove();
+
+    });
+
+});
+
+
+ // Get help checkbox
 
     // const checkBox = (e) => {
     //     if ($(".checkBox").is(":checked")) {
@@ -83,22 +100,5 @@ $(".noteInput").keyup(function(g) {
 
 
 // ${$('.textInput').val()}
-
-
-
-// Delete Button
-
-$(document).ready(function () { 
-
-    $('#trash').on('click', function () { 
-
-        $(this).closest('li').remove();
-
-    });
-
-});
-
-
- 
 
 
