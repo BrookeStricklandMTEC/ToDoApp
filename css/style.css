@@ -39,7 +39,6 @@ header > strong {
 display: flex;
 align-items: center;
 
-
 }
 
 
@@ -48,6 +47,13 @@ align-items: center;
     display: inline-flex;
     align-items: center;
     justify-content: flex-end; 
+}
+
+.headerIcons :hover{
+
+    cursor: pointer;
+    transition: .2s;
+    color: gray; 
 }
 
 .hI-spacing{ 
@@ -89,6 +95,7 @@ align-items: center;
     display: none; 
     transition: .2s;
     margin: 5px;
+    margin-bottom: 10px;
     position: relative;
    
 
@@ -101,10 +108,17 @@ align-items: center;
     position: relative;
 }
 
+.noteInput:hover { 
+
+    border-color: #a7bed3; 
+    transition: .8s;
+}
+
 .noteInput::placeholder { 
 
     color: gray; 
     border-color: gray;
+    background-color: none;
 }
 
 
@@ -118,7 +132,6 @@ align-items: center;
 .strike{
 
     text-decoration: line-through;
-
 }
 
 
@@ -126,7 +139,7 @@ align-items: center;
 
 ul, li {
     
-    margin-top: 10px;
+    margin-top: 15px;
 
 }
 
@@ -164,6 +177,7 @@ ul, li {
 
 }
 
+
 /*  */
 
 
@@ -183,6 +197,12 @@ ul, li {
 
     color: gray; 
      
+}
+
+.headingInput:hover { 
+
+    border-color: #a7bed3; 
+
 }
 
 
@@ -210,7 +230,7 @@ ul, li {
 
 .leftHeadingNoteClass { 
 
-    border-left: solid crimson;
+    border-left: solid #a7bed3;
     border-width: .5;
 
 }

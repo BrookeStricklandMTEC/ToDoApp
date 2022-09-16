@@ -73,7 +73,9 @@ $(".noteInput").keyup(function(g) {
         $("ul").append(
             
             
-        `<li> ` 
+        `<li> 
+        <input type="checkbox" class="checkBox">
+        ` 
 
         + noteInput + 
 
@@ -88,6 +90,8 @@ $(".noteInput").keyup(function(g) {
 
 
 });
+
+
 
 
 
@@ -109,15 +113,17 @@ $(document).ready(function () {
 
  // Get help checkbox
 
-    // const checkBox = (e) => {
-    //     if ($(".checkBox").is(":checked")) {
-    //         $(".noteInput").css("text-decoration", "strike-through");
-    //     } else {
-    //         $(".noteInput").css("text-decoration", "none");
-    //     }
-    //   };Z
+//  $(document).on("click", checkBox, function() { 
+        
+//         if ($(".checkBox").is(":checked")) {
+//             $(".noteInput").addClass('strike')
+//         } 
+//         else {
+//             $(".noteInput").css("text-decoration", "none");
+//         }
 
-    //   $(document).on("click", checkBox);
+//     })
+      
 
 
 
