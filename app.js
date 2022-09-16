@@ -3,7 +3,6 @@
 // 
 // make strikethrough when check box is clicked
 // make new list when new heading note is created
-// make new note when typed in "newNoteSub" 
 // 
 // 
 
@@ -42,13 +41,13 @@ $(".headingInput").keyup(function(e) {
 
     if (e.key == "Enter") {
 
-        $("#leftHeadingNote").show(100);
+        $('#leftHeadingNote').addClass('leftHeadingNoteClass'); 
 
         $("#leftHeadingNote").append( `
 
         <div class="leftPlaceHolder"> 
     
-            <div id="leftHeadingNote"> <strong> ${$('.textInput').val()} </strong> </div>
+            <div id="leftHeadingNote"> <strong> ${$('.headingInput').val()} </strong> </div>
             
         </div>
         
@@ -123,6 +122,6 @@ $(document).ready(function () {
 
 
 
-// ${$('.textInput').val()}
+
 
 

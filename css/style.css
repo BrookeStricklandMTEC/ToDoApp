@@ -26,14 +26,21 @@ body, html{
     display: flex; 
     flex-wrap: wrap;
     align-content: stretch;
-    margin: 30px; 
-    background-color: #FDFD96; 
+    margin: 15px 20px 20px 30px; 
+    width: 170;
+    background-color: #FdFD96; 
     padding: 20px;
     justify-content: space-between;
     
 }
 
+header > strong { 
 
+display: flex;
+align-items: center;
+
+
+}
 
 
 .headerIcons{
@@ -129,7 +136,7 @@ ul, li {
 #leftColumn {
 
     background-color: #FDFD96; 
-    width: 50px;
+    width: 70px;
     height: 500px;
 }
 
@@ -150,11 +157,11 @@ ul, li {
 
 .leftPlaceHolder { 
    
-    display: flex;
+    display: flex block;
     align-content: stretch;
     flex-wrap: wrap;
     margin: 20px 15px 15px 15px;
-    display: block;
+
 }
 
 /*  */
@@ -195,14 +202,18 @@ ul, li {
      
     width: 20px;
     height: 30px;
+    margin-top: 30px;
+    padding-left: 5px;
     transition: .2s;
-    border-left: solid 1px;
-    border-left-color: crimson;
     font-size: 20px;
-    display: none;
-    
 }
 
+.leftHeadingNoteClass { 
+
+    border-left: solid crimson;
+    border-width: .5;
+
+}
 
 #leftHeadingNote > {
 
