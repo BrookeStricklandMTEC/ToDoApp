@@ -88,16 +88,17 @@ $(".noteInput").keyup(function(g) {
 
 // Delete Button
 
-$('#newNote').on('click',' #delete', function () {
+$(document).ready(function () { 
 
-    let delete1 = $(this).parents()[3]
-    console.log(delete1); 
+    $('#trash').on('click', function () { 
 
-    // $(delete1).remove(); 
+        $(this).closest('li').remove();
 
+    });
 
 });
 
 
+ 
 
 

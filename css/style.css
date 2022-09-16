@@ -62,12 +62,17 @@ body, html{
 
 }
 
-#edit , #delete { 
+.fa { 
 
     margin-left: 5px;
-   
+
 }
 
+.fa :hover { 
+
+    cursor: pointer;
+
+}
 
 .noteInput, .checkBox { 
     
