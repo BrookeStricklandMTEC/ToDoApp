@@ -38,6 +38,30 @@ $(".headingInput").keyup(function(e) {
 
 });
 
+$(".headingInput").keyup(function(e) {
+
+    if (e.key == "Enter") {
+
+        $("#leftHeadingNote").show(100);
+
+        $("#leftHeadingNote").append( `
+
+        <div class="leftPlaceHolder"> 
+    
+            <div id="leftHeadingNote"> <strong> ${$('.textInput').val()} </strong> </div>
+            
+        </div>
+        
+        `
+        
+    )}
+
+
+});
+
+
+
+
 
 // when new text entry is changed, it will add the value underneath it 
 
