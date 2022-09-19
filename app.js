@@ -87,6 +87,9 @@ $(".noteInput").keyup(function(g) {
         
 
         </li> 
+
+
+
         `  
         
     )}
@@ -115,7 +118,7 @@ $(document).ready(function () {
 
 // Edit Button
 
-$('li').on('click',' #edit', function () {
+$('li').on('click','#edit', function () {
 
     let editButton1 = $(this).parents()[1]
     let editButton2 = $(editButton1).children()[3]
@@ -137,9 +140,9 @@ let checkBox = $('.checkBox');
 
  $(document).on("click", checkBox, function() { 
         
-        if ($(".checkBox").is(":checked")) {
+        if ($(checkBox).is(":checked")) {
             console.log('checked'); 
-            // $(".noteInput").addClass('strike');
+            // $(".noteInput").toggleClass('strike');
         } 
         else {
             // $(".noteInput").css("text-decoration", "none");

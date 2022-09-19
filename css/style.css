@@ -68,6 +68,9 @@ align-items: center;
 
 /* No work :( */
 
+    
+
+
     /* .fa :hover { 
 
         cursor: pointer;
@@ -75,7 +78,7 @@ align-items: center;
     }
 
 
-    /* #edit :hover{ 
+     #edit :hover{ 
 
         cursor: pointer;
 
@@ -92,10 +95,10 @@ align-items: center;
 
         display:none; 
 
-    }
+    } */
     
     
-    */ 
+
 
     
 
@@ -128,12 +131,11 @@ align-items: center;
     background-color: none;
 }
 
-.checkBox:hover{
-
+input[type=checkbox] {
+    position: relative;
     cursor: pointer;
-    
-}
 
+}
 
 
 .strike{
