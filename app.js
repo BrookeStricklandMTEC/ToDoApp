@@ -2,7 +2,6 @@
 // To create
 // 
 // make strikethrough when check box is clicked
-// make new list when new heading note is created
 // 
 // 
 
@@ -42,6 +41,7 @@ $(".headingInput").keyup(function(e) {
     if (e.key == "Enter") {
 
         $('#leftHeadingNote').addClass('leftHeadingNoteClass'); 
+        $('.checkBox').show(100); 
 
         $("#leftHeadingNote").append( `
 
@@ -69,12 +69,14 @@ $(".noteInput").keyup(function(g) {
     if (g.key == "Enter") {
 
         var noteInput = $(this).val(); 
+        $('.checkBox').show(100)
 
         $("ul").append(
             
             
-        `<li> 
-        <input type="checkbox" class="checkBox">
+        `
+        <li><label><input type="checkbox" class="checkBox"></label>
+
         ` 
 
         + noteInput + 
@@ -83,6 +85,7 @@ $(".noteInput").keyup(function(g) {
         <i style="font-size:17px" class="fa" id="edit"> &#xf044;</i>
         <i style="font-size:17px" class="fa" id="trash">&#xf014;</i>
         
+
         </li> 
         `  
         
@@ -110,19 +113,40 @@ $(document).ready(function () {
 
 });
 
+// Edit Button
+
+$('li').on('click',' #edit', function () {
+
+    let editButton1 = $(this).parents()[1]
+    let editButton2 = $(editButton1).children()[3]
+    
+    
+    console.log(editButton2); 
+
+    // $(editButton2).toggleClass('editStyle'); 
+
+});
+
+
+
+
+
+let checkBox = $('.checkBox'); 
 
  // Get help checkbox
 
-//  $(document).on("click", checkBox, function() { 
+ $(document).on("click", checkBox, function() { 
         
-//         if ($(".checkBox").is(":checked")) {
-//             $(".noteInput").addClass('strike')
-//         } 
-//         else {
-//             $(".noteInput").css("text-decoration", "none");
-//         }
+        if ($(".checkBox").is(":checked")) {
+            console.log('checked'); 
+            // $(".noteInput").addClass('strike');
+        } 
+        else {
+            // $(".noteInput").css("text-decoration", "none");
+        }
 
-//     })
+    })
+
       
 
 

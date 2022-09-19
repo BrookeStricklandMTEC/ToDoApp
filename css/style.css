@@ -68,44 +68,51 @@ align-items: center;
 
 /* No work :( */
 
-/* .fa :hover { 
+    /* .fa :hover { 
 
-    cursor: pointer;
+        cursor: pointer;
 
-}
+    }
 
 
-/* #edit :hover{ 
+    /* #edit :hover{ 
 
-    cursor: pointer;
+        cursor: pointer;
 
-}
+    }
 
-#trash :hover { 
+    #trash :hover { 
 
-    cursor: pointer;
+        cursor: pointer;
 
-} */ 
+    } 
+    
+    
+    .editStyle{
+
+        display:none; 
+
+    }
+    
+    
+    */ 
+
+    
 
 /*  */
 
 
-.noteInput, .checkBox { 
-    
+
+.noteInput { 
+
     display: none; 
     transition: .2s;
     margin: 5px;
     margin-bottom: 10px;
     position: relative;
-   
-
-}
-
-.noteInput { 
-
     width: 150px;
     height: 20px;
-    position: relative;
+    
 }
 
 .noteInput:hover { 
@@ -121,13 +128,13 @@ align-items: center;
     background-color: none;
 }
 
+.checkBox:hover{
 
-.checkBox{
-
-    width: 15px;
-    height: 15px;
-    top:72px;
+    cursor: pointer;
+    
 }
+
+
 
 .strike{
 
@@ -139,7 +146,9 @@ align-items: center;
 
 ul, li {
     
-    margin-top: 15px;
+    padding: 15px; 
+    margin-left: 5px;
+    margin-right: 5px;
 
 }
 
