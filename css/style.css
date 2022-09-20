@@ -65,35 +65,32 @@ align-items: center;
 
 /* Buttons */
 
+#edit:hover{ 
 
-/* No work :( */
+  cursor: pointer;
 
-    
+}
 
-    #edit:hover{ 
+#trash:hover { 
 
-        cursor: pointer;
+ cursor: pointer;
 
-    }
+} 
 
-    #trash:hover { 
+#check:hover{
 
-        cursor: pointer;
+ cursor: pointer;
 
-    } 
-    
-    
-    .editStyle{
-
-        display:none; 
-
-    }
+}
     
     
+.editStyle{
 
+ display:none; 
 
-    
+}
 
+  
 /*  */
 
 

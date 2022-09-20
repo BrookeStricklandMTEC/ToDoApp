@@ -9,10 +9,6 @@
 // New Note 
 
 
-
-// How to make new entered notes create new "page" on left column 
-
-
 $(".headingInput").keyup(function(e) {
 
     if (e.key == "Enter") {
@@ -121,18 +117,67 @@ $(document).ready(function () {
 $('body').on('click','#edit', function () {
 
 
-    console.log("edited");
+    let edit1 = $(this).parents()[1]
+    let edit2 = $(edit1).children()[0]
+    let edit3 = $(edit2).text(''); 
 
-    // let editButton1 = $(this).parents()[1]
-    // let editButton2 = $(editButton1).children()[3]
-    
-    
-    // console.log(editButton2); 
+    $(edit3).append(
+    `
+                   
+        <label><input type="checkbox" class="checkBox"></label>
+         
+        <input type="text" placeholder="Edit Your Note" class="editInput">
+        `
 
-    // $(editButton2).toggleClass('editStyle'); 
+         +edit3+   
+        
+
+        `
+        <i style="font-size:17px" class="fa" id="check"> &#xf00c;</i>
+        
+    `)
+    
+    console.log(edit3); 
 
 });
 
+
+$('body').on('click','#check', function () {
+
+
+    let check1 = $(this).parents()[1]
+    let check2 = $(check1).children()[0]
+    let check3 = $(check2).text(''); 
+
+    console.log(check3);
+
+    // let checkText = $(check3).val()
+
+    // $(check3).append(
+    // `
+                   
+    //     <label><input type="checkbox" class="checkBox"></label>
+         
+    //     `
+         
+    //         +checkText+
+         
+    //     `
+    //     <i style="font-size:17px" class="fa" id="check"> &#xf00c;</i>
+        
+    // `)
+    
+
+});
+
+
+
+
+// $('body').on('click', '#edit', function() {
+//     var edit = $(this).text();
+//     $(this).text('');
+//     $(this).append(`<input type="text" value="${task}" />`);
+// });
 
 
 
