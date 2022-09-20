@@ -106,11 +106,11 @@ $(".noteInput").keyup(function(g) {
 
 $(document).ready(function () { 
 
-    $('#trash').on('click', function () { 
+    $("body").on('click','#trash',function () { 
 
         console.log("deleted"); 
 
-        // $(this).closest('li').remove();
+        $(this).closest('li').remove();
 
     });
 
@@ -118,13 +118,16 @@ $(document).ready(function () {
 
 // Edit Button
 
-$('li').on('click','#edit', function () {
+$('body').on('click','#edit', function () {
 
-    let editButton1 = $(this).parents()[1]
-    let editButton2 = $(editButton1).children()[3]
+
+    console.log("edited");
+
+    // let editButton1 = $(this).parents()[1]
+    // let editButton2 = $(editButton1).children()[3]
     
     
-    console.log(editButton2); 
+    // console.log(editButton2); 
 
     // $(editButton2).toggleClass('editStyle'); 
 
@@ -134,21 +137,21 @@ $('li').on('click','#edit', function () {
 
 
 
-let checkBox = $('.checkBox'); 
+// let checkBox = $('.checkBox'); 
 
- // Get help checkbox
+//  // Get help checkbox
 
- $(document).on("click", checkBox, function() { 
+// $("body").on("click", '.checkBox', function() { 
         
-        if ($(checkBox).is(":checked")) {
-            console.log('checked'); 
-            // $(".noteInput").toggleClass('strike');
-        } 
-        else {
-            // $(".noteInput").css("text-decoration", "none");
-        }
+//         if ($(checkBox).is(":checked")) {
+//             console.log('checked'); 
+//             // $(".noteInput").toggleClass('strike');
+//         } 
+//         else {
+//             // $(".noteInput").css("text-decoration", "none");
+//         }
 
-    })
+// })
 
       
 

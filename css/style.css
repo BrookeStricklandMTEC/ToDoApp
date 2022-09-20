@@ -70,21 +70,13 @@ align-items: center;
 
     
 
-
-    /* .fa :hover { 
-
-        cursor: pointer;
-
-    }
-
-
-     #edit :hover{ 
+    #edit:hover{ 
 
         cursor: pointer;
 
     }
 
-    #trash :hover { 
+    #trash:hover { 
 
         cursor: pointer;
 
@@ -95,7 +87,7 @@ align-items: center;
 
         display:none; 
 
-    } */
+    }
     
     
 
@@ -134,7 +126,6 @@ align-items: center;
 input[type=checkbox] {
     position: relative;
     cursor: pointer;
-
 }
 
 
