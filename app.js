@@ -2,8 +2,10 @@
 // To create
 // 
 // make strikethrough when check box is clicked
+// make functional edit button 
 // 
-// 
+
+
 
 
 // New Note 
@@ -64,7 +66,7 @@ $(".noteInput").keyup(function(g) {
 
     if (g.key == "Enter") {
 
-        var noteInput = $(this).val(); 
+        let noteInput = $(this).val(); 
         $('.checkBox').show(100)
 
         $("ul").append(
@@ -94,10 +96,6 @@ $(".noteInput").keyup(function(g) {
 });
 
 
-
-
-
-
 // Delete Button
 
 $(document).ready(function () { 
@@ -114,30 +112,27 @@ $(document).ready(function () {
 
 // Edit Button
 
+// `<input type="text" placeholder="Edit Your Note" id="editInput">`
+
 $('body').on('click','#edit', function () {
 
+    $('.editInput').show(100);
 
     let edit1 = $(this).parents()[1]
+    console.log(edit1)
     let edit2 = $(edit1).children()[0]
-    let edit3 = $(edit2).text(''); 
+    console.log(edit2); 
+    let edit3 = $(edit2).append(`<input type="text" placeholder="Edit Your Note" id="editInput">`);
+    console.log(edit3); 
 
     $(edit3).append(
     `
-                   
-        <label><input type="checkbox" class="checkBox"></label>
-         
-        <input type="text" placeholder="Edit Your Note" class="editInput">
-        `
-
-         +edit3+   
         
-
-        `
         <i style="font-size:17px" class="fa" id="check"> &#xf00c;</i>
         
-    `)
+    `
+    )
     
-    console.log(edit3); 
 
 });
 
@@ -146,57 +141,51 @@ $('body').on('click','#check', function () {
 
 
     let check1 = $(this).parents()[1]
+    console.log(check1); 
     let check2 = $(check1).children()[0]
-    let check3 = $(check2).text(''); 
-
+    console.log(check2);
+    let checkValue = $("#editInput").val()
+    console.log(checkValue);
+    let check3 = $(check2).text(checkValue); 
     console.log(check3);
 
-    // let checkText = $(check3).val()
-
-    // $(check3).append(
-    // `
-                   
-    //     <label><input type="checkbox" class="checkBox"></label>
-         
-    //     `
-         
-    //         +checkText+
-         
-    //     `
-    //     <i style="font-size:17px" class="fa" id="check"> &#xf00c;</i>
+    $(checkValue).append(
+        `         
+        <label><input type="checkbox" class="checkBox"></label>
+        `
+        +checkValue+
         
-    // `)
+        `
+        <i style="font-size:17px" class="fa" id="edit"> &#xf044;</i>
+        <i style="font-size:17px" class="fa" id="trash">&#xf014;</i>
+        
+    `)
     
 
 });
 
 
+ // Get help checkbox
 
-
-// $('body').on('click', '#edit', function() {
-//     var edit = $(this).text();
-//     $(this).text('');
-//     $(this).append(`<input type="text" value="${task}" />`);
-// });
-
-
-
-
-// let checkBox = $('.checkBox'); 
-
-//  // Get help checkbox
-
-// $("body").on("click", '.checkBox', function() { 
+$("body").on("click", '.checkBox', function() { 
         
-//         if ($(checkBox).is(":checked")) {
-//             console.log('checked'); 
-//             // $(".noteInput").toggleClass('strike');
-//         } 
-//         else {
-//             // $(".noteInput").css("text-decoration", "none");
-//         }
+    // $(this).closest("li").css("text-decoration","line-through");
+    $(this).closest("li").toggleClass("strike");
+    
+    console.log(this); 
+    
+    
+    
+    
+        // if ($(checkBox).is(":checked")) {
+        //     console.log('checked'); 
+        //     // $(".noteInput").toggleClass('strike');
+        // } 
+        // else {
+        //     // $(".noteInput").css("text-decoration", "none");
+        // }
 
-// })
+})
 
       
 

@@ -66,39 +66,31 @@ align-items: center;
 /* Buttons */
 
 #edit:hover{ 
-
   cursor: pointer;
-
+  color:#F2A2E8; 
+  transition: .2s;
 }
 
 #trash:hover { 
-
  cursor: pointer;
-
+ color: #ff6961;
+ transition: .2s;
 } 
 
 #check:hover{
-
  cursor: pointer;
-
+ color:#77DD77; 
+ transition: .2s;
 }
     
-    
-.editStyle{
 
- display:none; 
-
-}
 
   
 /*  */
 
-
-
 .noteInput { 
 
     display: none; 
-    transition: .2s;
     margin: 5px;
     margin-bottom: 10px;
     position: relative;
@@ -110,7 +102,6 @@ align-items: center;
 .noteInput:hover { 
 
     border-color: #a7bed3; 
-    transition: .8s;
 }
 
 .noteInput::placeholder { 
@@ -124,6 +115,8 @@ input[type=checkbox] {
     position: relative;
     cursor: pointer;
 }
+
+
 
 
 .strike{
@@ -210,7 +203,6 @@ ul, li {
     margin-bottom: 15px;
     margin-left: 10px;
     font-size: 30px;
-    position: relative;
     height: 50px;
 
 }
