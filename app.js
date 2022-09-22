@@ -102,8 +102,6 @@ $(document).ready(function () {
 
     $("body").on('click','#trash',function () { 
 
-        console.log("deleted"); 
-
         $(this).closest('li').remove();
 
     });
@@ -112,18 +110,14 @@ $(document).ready(function () {
 
 // Edit Button
 
-// `<input type="text" placeholder="Edit Your Note" id="editInput">`
 
 $('body').on('click','#edit', function () {
 
     $('.editInput').show(100);
 
     let edit1 = $(this).parents()[1]
-    console.log(edit1)
     let edit2 = $(edit1).children()[0]
-    console.log(edit2); 
     let edit3 = $(edit2).append(`<input type="text" placeholder="Edit Your Note" id="editInput">`);
-    console.log(edit3); 
 
     $(edit3).append(
     `
@@ -141,49 +135,32 @@ $('body').on('click','#check', function () {
 
 
     let check1 = $(this).parents()[1]
-    console.log(check1); 
     let check2 = $(check1).children()[0]
-    console.log(check2);
     let checkValue = $("#editInput").val()
-    console.log(checkValue);
-    let check3 = $(check2).text(checkValue); 
-    console.log(check3);
 
-    $(checkValue).append(
-        `         
+
+    let check3 = $("li").replaceWith(
+        
+        `
+        <li> 
         <label><input type="checkbox" class="checkBox"></label>
         `
         +checkValue+
-        
+
         `
         <i style="font-size:17px" class="fa" id="edit"> &#xf044;</i>
         <i style="font-size:17px" class="fa" id="trash">&#xf014;</i>
-        
-    `)
     
+        </li>
+        `
+    ); 
 
 });
 
 
- // Get help checkbox
-
 $("body").on("click", '.checkBox', function() { 
-        
-    // $(this).closest("li").css("text-decoration","line-through");
+
     $(this).closest("li").toggleClass("strike");
-    
-    console.log(this); 
-    
-    
-    
-    
-        // if ($(checkBox).is(":checked")) {
-        //     console.log('checked'); 
-        //     // $(".noteInput").toggleClass('strike');
-        // } 
-        // else {
-        //     // $(".noteInput").css("text-decoration", "none");
-        // }
 
 })
 
